@@ -99,6 +99,13 @@ data_file = config_dir / "data.json"
 - When paths can be strings or Path objects: use `Path | str` or `Union[Path, str]`
 - Convert string inputs to Path early: `path = Path(path_input)`
 
+## Matplotlib
+
+If you use Matplotlib,
+
+- Always prefer object-oriented syntax, rather than pyplot syntax.
+- Refrain from using function like `plt.plot` etc., and explicitly call methods or functions for Axes, Axis, Figure, etc.
+
 ## Readme
 
 - Write readme for other developers, and not users.
