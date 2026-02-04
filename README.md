@@ -14,6 +14,7 @@ The gui has
      - Each plot is vertically stacked, and their x axis is shared.
   - A vertical line is shown to denote to the current timepoint in the plot.
     - To reduce redraw time, that line is overlayed on top of the base plot.
+    - The right space is clickable; when the use clicks one point, the video will be set to that timepoint.
 - In the bottom, you can
   - pause or resume playing
   - set the video time, by time and by frame
