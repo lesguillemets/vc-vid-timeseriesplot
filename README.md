@@ -20,23 +20,17 @@ with visualising current time on that plot.
 
 ## Usage
 
-### Demo
+### Example Script
 
-A demo script is provided to test the video player:
+An example script is provided in the `examples` directory:
 
 ```bash
-python demo.py
+python examples/demo.py path/to/your/video.mp4
 ```
 
-This will create a test video and launch the GUI.
+Note: You need to provide your own video file.
 
 ### Command Line
-
-```bash
-python -m vc_vid_timeseriesplot --video-path path/to/video.mp4
-```
-
-Or using the installed script:
 
 ```bash
 vc-vid-timeseriesplot --video-path path/to/video.mp4
