@@ -42,4 +42,6 @@ It will look like this:
 
 ## Function
 
-- `load_video_and_play_with(video_path: Path, data: list[np.ndarray | pl.Series])` will be our main entry point, with additional options emerging later.
+- `load_video_and_play_with(video_path: Path, data: list[np.ndarray | pl.Series] | pl.DataFrame)` will be our main entry point, with additional options emerging later.
+  - If list of (np.ndarray or pl.Series) is given, each of that will create a subplot.
+  - If a pl.DataFrame is given, all columns from that dataframe will be used for plotting.
