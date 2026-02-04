@@ -1,7 +1,56 @@
-# vc-cid-timeseriesplot
+# vc-vid-timeseriesplot
 
-This library will provide a function to play a video, along with a time series plot of any data,
+This library provides a function to play a video, along with a time series plot of any data,
 with visualising current time on that plot.
+
+## Current Status
+
+**Phase 1: Basic GUI (Completed)**
+- Video playback functionality on the left side
+- Clickable plot area on the right side (plotting to be implemented)
+- Control panel at the bottom with:
+  - Play/Pause button
+  - Frame navigation (spinbox)
+  - Time navigation (spinbox)
+
+**Phase 2: Plotting (To be implemented)**
+- Timeseries data plotting
+- Vertical line showing current time
+- Multiple stacked plots with shared x-axis
+
+## Usage
+
+### Demo
+
+A demo script is provided to test the video player:
+
+```bash
+python demo.py
+```
+
+This will create a test video and launch the GUI.
+
+### Command Line
+
+```bash
+python -m vc_vid_timeseriesplot --video-path path/to/video.mp4
+```
+
+Or using the installed script:
+
+```bash
+vc-vid-timeseriesplot --video-path path/to/video.mp4
+```
+
+### As a Library
+
+```python
+from pathlib import Path
+from vc_vid_timeseriesplot import load_video_and_play_with
+
+video_path = Path("path/to/video.mp4")
+load_video_and_play_with(video_path)
+```
 
 ## GUI
 
