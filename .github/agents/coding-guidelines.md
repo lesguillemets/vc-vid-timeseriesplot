@@ -7,6 +7,7 @@ This document provides instructions for AI coding agents working on the vptry-fa
 
 - Target python 3.14, which means you may use newer syntaxes and functionalities provided by python.
 - Always prefer polars and avoid pandas.
+- Split functions, so that each function has its clear meaning and granular function. Unless it makes the code clearer, avoid one large function that does everything.
 - Prefer British spelling.
 
 ## Commits
