@@ -3,6 +3,7 @@
 from pathlib import Path
 
 from PySide6.QtCore import Qt, QUrl
+from PySide6.QtGui import QMouseEvent
 from PySide6.QtMultimedia import QMediaPlayer, QAudioOutput
 from PySide6.QtMultimediaWidgets import QVideoWidget
 from PySide6.QtWidgets import (
@@ -21,7 +22,7 @@ from PySide6.QtWidgets import (
 class ClickablePlotWidget(QWidget):
     """Widget for the plot area that handles clicks to set video time."""
 
-    def __init__(self, parent=None):
+    def __init__(self, parent: QWidget | None = None) -> None:
         super().__init__(parent)
         self.setMinimumWidth(400)
         self.setStyleSheet("background-color: #f0f0f0;")
@@ -42,7 +43,7 @@ class ClickablePlotWidget(QWidget):
         """Set the total video duration in milliseconds."""
         self.video_duration_ms = duration_ms
 
-    def mousePressEvent(self, event):
+    def mousePressEvent(self, event: QMouseEvent) -> None:
         """Handle mouse click to set video time."""
         if self.video_player and self.video_duration_ms > 0:
             # Calculate position as proportion of widget height
@@ -58,7 +59,7 @@ class ClickablePlotWidget(QWidget):
 class ControlPanel(QWidget):
     """Control panel with play/pause, frame, and time controls."""
 
-    def __init__(self, parent=None):
+    def __init__(self, parent: QWidget | None = None) -> None:
         super().__init__(parent)
         self.video_player: QMediaPlayer | None = None
         self.fps: float = 30.0  # Default FPS

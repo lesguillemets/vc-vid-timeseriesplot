@@ -7,6 +7,6 @@ __all__ = ["load_video_and_play_with", "main"]
 
 def main() -> None:
     """Command line entry point."""
-    from src.main import main as cli_main
+    from main import main as cli_main
 
     cli_main()

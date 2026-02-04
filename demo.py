@@ -12,7 +12,9 @@ import numpy as np
 from vc_vid_timeseriesplot.vid_timeseriesplot import load_video_and_play_with
 
 
-def create_demo_video(output_path: Path, duration_s: float = 10.0, fps: int = 30):
+def create_demo_video(
+    output_path: Path, duration_s: float = 10.0, fps: int = 30
+) -> None:
     """Create a simple demo video with changing colours and frame counter."""
     width, height = 640, 480
     fourcc = cv2.VideoWriter_fourcc(*"mp4v")
